@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+//Structure of a Node.
+struct Node{
+    int data;
+    struct Node* next;
+};
+int main(){
+    struct Node* head = NULL;
+    insertAtEnd(&head, 20);
+    insertAtBeginning(&head, 10);
+    insertAtBeginning(&head, 30);
+    insertAt(&head, 1, 70);
+    insertAt(&head, 4, 80);
+    insertAt(&head, 5, 90);
+    insertAtEnd(&head, 100);
+    deleteFrom(&head, 1);
+    deleteFrom(&head, 4);
+    deleteFrom(&head, 5);
+    deleteFromFirst(&head);
+    deleteFromEnd(&head);
+    Reverse(&head);
+    Print(head);
+}
